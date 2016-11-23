@@ -318,7 +318,7 @@ RCT_NOT_IMPLEMENTED(- (instancetype)initWithCoder:(NSCoder *)aDecoder)
 //we are loading the script from this method.
 - (NSString *)webViewBridgeScript {
    NSBundle *bundle = [NSBundle mainBundle];
-   NSString *webViewBridgeScriptFile = [bundle pathForResource:@"notescore"
+   NSString *webViewBridgeScriptFile = [bundle pathForResource:@"notescorebridge"
                                                         ofType:@"js"];
   return [NSString stringWithContentsOfFile:webViewBridgeScriptFile
                                                                     encoding:NSUTF8StringEncoding
