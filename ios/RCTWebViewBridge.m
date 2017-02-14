@@ -57,6 +57,14 @@ NSString *const RCTWebViewBridgeSchema = @"wvb";
   NSString *_injectedJavaScript;
 }
 
+
+
+-(UIView*)viewForZoomingInScrollView:(UIScrollView*)scrollView {
+return nil;
+}
+
+
+
 - (instancetype)initWithFrame:(CGRect)frame
 {
   if ((self = [super initWithFrame:frame])) {
@@ -65,6 +73,9 @@ NSString *const RCTWebViewBridgeSchema = @"wvb";
     _contentInset = UIEdgeInsetsZero;
     _webView = [[UIWebView alloc] initWithFrame:self.bounds];
     _webView.delegate = self;
+    _webView.scrollView.delegate = self;
+    _webView.scalesPageToFit = NO;
+    _webView.multipleTouchEnabled = NO;
     [self addSubview:_webView];
   }
   return self;
