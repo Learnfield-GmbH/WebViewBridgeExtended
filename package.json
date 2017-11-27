@@ -71,7 +71,8 @@
   "dependencies": {
     "invariant": "2.2.0",
     "keymirror": "0.1.1",
-    "prop-types": "^15.6.0"
+    "prop-types": "^15.6.0",
+    "create-react-class": "^15.6.2"
   },
   "description": "React Native WebView Javascript Bridge - updated",
   "devDependencies": {},
